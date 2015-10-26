@@ -2,8 +2,8 @@ function img = sobelDetector(img)
 
 %sobel kernels
 
-kx = [-1 0 1; -2 0 2; -1 0 1];
-ky = [-1 -2 -1; 0 0 0;1 2 1];
+kx = fspecial('sobel')';
+ky = fspecial('sobel');
 
 [rows cols] = size(img);
 
